@@ -1,0 +1,26 @@
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+int main()
+{
+  string in;
+
+  char b;
+  int startingL;
+  int count = 0;
+    getline(cin, in);
+
+    for(int i =0;i<in.size();i++){
+    startingL = i;
+    if (i<in.size()-4&&in[i]== 'h'&&in[i+1]=='e'&&in[i+2]== 'l'&&in[i+3]== 'l'&&in[i+4]== 'o'){
+      count++;
+       }
+    }
+
+    cout<<count<<endl;
+
+    return 0;
+}
+
+
