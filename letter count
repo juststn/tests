@@ -1,0 +1,41 @@
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+int main()
+{
+  char in[80];
+   int max;
+        int ind;
+
+  int counts[26];
+  for(int i =0; i<26; i++){
+  counts[i] = 0;
+  }
+
+  cin>>in;
+
+  cout << in << endl;
+
+    cout<<"test"<<endl;
+    for(int i =0; in[i] != '\0';i++){
+
+      if(in[i]>='a'&&in[i]<='z'){
+        int x= in[i] -'a';
+        counts[x]++;
+      }
+
+    }
+
+    max=0;
+    for(int i = 0; i<26; i++){
+      if (counts[i] > counts[max]) {
+        max =i;
+      }
+    }
+
+    cout<<counts[max]<<" "<< (char)(max+'a')<<endl;
+
+    return 0;
+}
+
