@@ -1,0 +1,30 @@
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+int main()
+{
+  string in;
+
+  char b;
+  int startingL;
+  int count = 0;
+    getline(cin, in);
+
+    for(int i =0;i<in.size();i++){
+    startingL = i;
+
+    while (i<in.size()&&in[i]!=' '){
+      i++;
+       }
+    b = in[startingL];
+    in[startingL] = in[i-1];
+    in[i-1] = b;
+
+
+    }
+
+    cout<<in<<endl;
+
+    return 0;
+}
