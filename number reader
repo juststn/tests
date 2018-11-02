@@ -1,0 +1,55 @@
+
+#include <iostream>
+
+#include <stdio.h>
+
+using namespace std;
+
+int main()
+{
+int a = 0;
+int b = 0;
+int max;
+float avg = 0;
+int numbers[80];
+char input[80];
+
+cin.getline(input,80);
+
+for(int i = 0; input[i]!= '\0'; i++){
+    while(input[i]!='\0'&&input[i]!=','){
+     b=b*10+input[i]-'0';
+     
+     
+        i++; 
+        
+        
+    }
+    cout<<b<<endl;
+    numbers[a] = b;
+    b=0;
+    a++;
+    
+    
+    }   
+
+cout<<"a="<<a<<endl;
+
+for(int i = 0; i<a; i++){
+    if(numbers[i]>max){
+        max=numbers[i];
+    }
+    
+    avg = avg + numbers[i];
+    
+    }
+    
+    avg = avg/(a);
+    
+    cout<<avg<<endl;
+    cout<<max<<endl;
+
+
+
+    return 0;
+}
