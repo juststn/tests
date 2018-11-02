@@ -1,0 +1,44 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+string in;
+string out = "";
+string convert1 = "";
+string convert2 = "";
+
+int main(){
+  cout<<"testse"<<endl;
+  getline(cin,in);
+
+  for(int i = 0; i<in.size(); i++){
+    if('z'>=in[i]&&in[i]>='a'||'9'>=in[i]&&in[i]>='0'||'Z'>=in[i]&&in[i]>='A'||in[i]==' '){
+      out = out + in[i];
+    }
+    else{}
+  }
+  for(int i = 2; i<out.size(); i=i+3){
+
+      convert1 = convert1 + out[i];
+
+  }
+  for(int i = 0; i<convert1.size(); i++){
+    if('Z'>=convert1[i]&&convert1[i]>='A'){
+      convert2 = convert2 + (char)(convert1[i] + 32);
+    }
+    else if('z'>=convert1[i]&&convert1[i]>='a'){
+      convert2 = convert2+(char)(convert1[i] - 32);
+    }
+    else{
+      convert2 = convert2 + convert1[i];
+    }
+  }
+
+
+
+  cout<<out<<endl;
+  cout<<convert1<<endl;
+  cout<<convert2<<endl;
+}
+
