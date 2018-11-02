@@ -1,0 +1,30 @@
+
+#include <iostream>
+
+#include <stdio.h>
+
+using namespace std;
+
+int main()
+{
+int a = 0;
+int b = 0;
+int max;
+float avg = 0;
+char output[80];
+char input[80];
+
+cin.getline(input,80);
+
+for(int i = 0; input[i]!='\0'; i=i+2){
+    output[a]=input[i];
+    
+    a++;
+}
+
+cout << a << endl; 
+output[a]='\0';
+
+cout<<output<<endl;
+    return 0;
+}
